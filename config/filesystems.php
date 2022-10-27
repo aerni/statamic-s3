@@ -54,6 +54,18 @@ return [
             // 'visibility' => 'public', // https://statamic.dev/assets#visibility
         ],
 
+        'upcloud' => [
+            'driver' => 's3',
+            'key' => env('UPCLOUD_KEY'),
+            'secret' => env('UPCLOUD_SECRET'),
+            'region' => env('UPCLOUD_REGION'),
+            'bucket' => env('UPCLOUD_BUCKET'),
+            'url' => env('UPCLOUD_URL'),
+            'endpoint' => env('UPCLOUD_ENDPOINT'),
+            'use_path_style_endpoint' => env('UPCLOUD_USE_PATH_STYLE_ENDPOINT', false),
+            'visibility' => 'public', // https://statamic.dev/assets#visibility
+        ],
+
         'assets' => [
             'driver' => 'local',
             'root' => public_path('assets'),
